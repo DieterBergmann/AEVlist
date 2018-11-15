@@ -14,9 +14,12 @@
 		B2F4BB5D219D814100FA097B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2F4BB5B219D814100FA097B /* LaunchScreen.storyboard */; };
 		B2F4BB6D219DBA5500FA097B /* ProjectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F4BB6B219DBA5500FA097B /* ProjectCell.swift */; };
 		B2F4BB6E219DBA5500FA097B /* ProjectCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2F4BB6C219DBA5500FA097B /* ProjectCell.xib */; };
+		B2F4BB71219DFFA000FA097B /* AddProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F4BB70219DFFA000FA097B /* AddProjectViewController.swift */; };
+		C146360EA6ED4C734A208A9A /* Pods_AEVlist.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6ED25699ECC65FF5842F0834 /* Pods_AEVlist.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6ED25699ECC65FF5842F0834 /* Pods_AEVlist.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AEVlist.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2F4BB4F219D813F00FA097B /* AEVlist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AEVlist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2F4BB52219D813F00FA097B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B2F4BB54219D813F00FA097B /* AEVListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AEVListViewController.swift; sourceTree = "<group>"; };
@@ -26,6 +29,9 @@
 		B2F4BB5E219D814100FA097B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B2F4BB6B219DBA5500FA097B /* ProjectCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectCell.swift; sourceTree = "<group>"; };
 		B2F4BB6C219DBA5500FA097B /* ProjectCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProjectCell.xib; sourceTree = "<group>"; };
+		B2F4BB70219DFFA000FA097B /* AddProjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProjectViewController.swift; sourceTree = "<group>"; };
+		C2CB18C6778DD1D201534A85 /* Pods-AEVlist.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AEVlist.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AEVlist/Pods-AEVlist.debug.xcconfig"; sourceTree = "<group>"; };
+		DB83E892D4A544F983B1C969 /* Pods-AEVlist.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AEVlist.release.xcconfig"; path = "Pods/Target Support Files/Pods-AEVlist/Pods-AEVlist.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +39,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C146360EA6ED4C734A208A9A /* Pods_AEVlist.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2A7DE3E612BE5796988674C4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6ED25699ECC65FF5842F0834 /* Pods_AEVlist.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B2F4BB46219D813F00FA097B = {
 			isa = PBXGroup;
 			children = (
 				B2F4BB51219D813F00FA097B /* AEVlist */,
 				B2F4BB50219D813F00FA097B /* Products */,
+				E92822533CBE7A856CB01971 /* Pods */,
+				2A7DE3E612BE5796988674C4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				B2F4BB54219D813F00FA097B /* AEVListViewController.swift */,
+				B2F4BB70219DFFA000FA097B /* AddProjectViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -102,6 +120,15 @@
 			path = CustomCell;
 			sourceTree = "<group>";
 		};
+		E92822533CBE7A856CB01971 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C2CB18C6778DD1D201534A85 /* Pods-AEVlist.debug.xcconfig */,
+				DB83E892D4A544F983B1C969 /* Pods-AEVlist.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -109,9 +136,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B2F4BB61219D814100FA097B /* Build configuration list for PBXNativeTarget "AEVlist" */;
 			buildPhases = (
+				D1A1684428D2932FA6A2EE32 /* [CP] Check Pods Manifest.lock */,
 				B2F4BB4B219D813F00FA097B /* Sources */,
 				B2F4BB4C219D813F00FA097B /* Frameworks */,
 				B2F4BB4D219D813F00FA097B /* Resources */,
+				2086483A2D39EA77805780D5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -169,11 +198,53 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2086483A2D39EA77805780D5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-AEVlist/Pods-AEVlist-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AEVlist/Pods-AEVlist-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D1A1684428D2932FA6A2EE32 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AEVlist-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B2F4BB4B219D813F00FA097B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2F4BB71219DFFA000FA097B /* AddProjectViewController.swift in Sources */,
 				B2F4BB6D219DBA5500FA097B /* ProjectCell.swift in Sources */,
 				B2F4BB55219D813F00FA097B /* AEVListViewController.swift in Sources */,
 				B2F4BB53219D813F00FA097B /* AppDelegate.swift in Sources */,
@@ -320,15 +391,13 @@
 		};
 		B2F4BB62219D814100FA097B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C2CB18C6778DD1D201534A85 /* Pods-AEVlist.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X73YKTXTQU;
 				INFOPLIST_FILE = AEVlist/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = de.idbSoftware.AEVlist;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -338,15 +407,13 @@
 		};
 		B2F4BB63219D814100FA097B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DB83E892D4A544F983B1C969 /* Pods-AEVlist.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X73YKTXTQU;
 				INFOPLIST_FILE = AEVlist/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = de.idbSoftware.AEVlist;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
