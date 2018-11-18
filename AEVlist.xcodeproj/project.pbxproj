@@ -15,6 +15,7 @@
 		B2F4BB6D219DBA5500FA097B /* ProjectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F4BB6B219DBA5500FA097B /* ProjectCell.swift */; };
 		B2F4BB6E219DBA5500FA097B /* ProjectCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2F4BB6C219DBA5500FA097B /* ProjectCell.xib */; };
 		B2F4BB71219DFFA000FA097B /* AddProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F4BB70219DFFA000FA097B /* AddProjectViewController.swift */; };
+		B2F4BB73219E153E00FA097B /* ProjectData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F4BB72219E153E00FA097B /* ProjectData.swift */; };
 		C146360EA6ED4C734A208A9A /* Pods_AEVlist.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6ED25699ECC65FF5842F0834 /* Pods_AEVlist.framework */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +31,7 @@
 		B2F4BB6B219DBA5500FA097B /* ProjectCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectCell.swift; sourceTree = "<group>"; };
 		B2F4BB6C219DBA5500FA097B /* ProjectCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProjectCell.xib; sourceTree = "<group>"; };
 		B2F4BB70219DFFA000FA097B /* AddProjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProjectViewController.swift; sourceTree = "<group>"; };
+		B2F4BB72219E153E00FA097B /* ProjectData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProjectData.swift; path = "AEVlist/Data Model/ProjectData.swift"; sourceTree = SOURCE_ROOT; };
 		C2CB18C6778DD1D201534A85 /* Pods-AEVlist.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AEVlist.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AEVlist/Pods-AEVlist.debug.xcconfig"; sourceTree = "<group>"; };
 		DB83E892D4A544F983B1C969 /* Pods-AEVlist.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AEVlist.release.xcconfig"; path = "Pods/Target Support Files/Pods-AEVlist/Pods-AEVlist.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -75,7 +77,7 @@
 		B2F4BB51219D813F00FA097B /* AEVlist */ = {
 			isa = PBXGroup;
 			children = (
-				B2F4BB64219DB8CE00FA097B /* Model */,
+				B2F4BB64219DB8CE00FA097B /* Data Model */,
 				B2F4BB66219DB90200FA097B /* View */,
 				B2F4BB65219DB8DB00FA097B /* Controller */,
 				B2F4BB52219D813F00FA097B /* AppDelegate.swift */,
@@ -85,11 +87,12 @@
 			path = AEVlist;
 			sourceTree = "<group>";
 		};
-		B2F4BB64219DB8CE00FA097B /* Model */ = {
+		B2F4BB64219DB8CE00FA097B /* Data Model */ = {
 			isa = PBXGroup;
 			children = (
+				B2F4BB72219E153E00FA097B /* ProjectData.swift */,
 			);
-			path = Model;
+			path = "Data Model";
 			sourceTree = "<group>";
 		};
 		B2F4BB65219DB8DB00FA097B /* Controller */ = {
@@ -245,6 +248,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B2F4BB71219DFFA000FA097B /* AddProjectViewController.swift in Sources */,
+				B2F4BB73219E153E00FA097B /* ProjectData.swift in Sources */,
 				B2F4BB6D219DBA5500FA097B /* ProjectCell.swift in Sources */,
 				B2F4BB55219D813F00FA097B /* AEVListViewController.swift in Sources */,
 				B2F4BB53219D813F00FA097B /* AppDelegate.swift in Sources */,
@@ -397,7 +401,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X73YKTXTQU;
 				INFOPLIST_FILE = AEVlist/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = de.idbSoftware.AEVlist;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -413,7 +420,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X73YKTXTQU;
 				INFOPLIST_FILE = AEVlist/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = de.idbSoftware.AEVlist;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;

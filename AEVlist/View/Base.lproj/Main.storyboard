@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Projects-->
+        <!--Projekte-->
         <scene sceneID="dky-yI-07r">
             <objects>
                 <viewController id="4HH-Rc-We2" customClass="AEVListViewController" customModule="AEVlist" customModuleProvider="target" sceneMemberID="viewController">
@@ -39,12 +39,14 @@
                                 <items>
                                     <barButtonItem systemItem="add" id="6Mj-Nr-FWK">
                                         <connections>
-                                            <segue destination="sdk-v1-Dxp" kind="presentation" id="WJN-aL-SBj"/>
+                                            <action selector="addButtonPressed:" destination="4HH-Rc-We2" id="Nev-zb-siA"/>
+                                            <segue destination="sdk-v1-Dxp" kind="presentation" identifier="goToAddProject" id="WJN-aL-SBj"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem title="Projekt hinzufügen" id="Dlg-RK-tq0">
                                         <connections>
-                                            <segue destination="sdk-v1-Dxp" kind="presentation" id="vt6-Ad-AOU"/>
+                                            <action selector="addButtonPressed:" destination="4HH-Rc-We2" id="REa-Vm-bbf"/>
+                                            <segue destination="sdk-v1-Dxp" kind="presentation" identifier="goToAddProject" id="vt6-Ad-AOU"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -53,7 +55,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="lxL-nf-PGn"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Projects" id="eFv-LN-W7V"/>
+                    <navigationItem key="navigationItem" title="Projekte" id="eFv-LN-W7V"/>
                     <connections>
                         <outlet property="projectTableView" destination="CDO-I6-NCi" id="m7i-Vk-leT"/>
                     </connections>
@@ -150,10 +152,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fyA-AI-rdv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2336.8000000000002" y="-9.4452773613193415"/>
+            <point key="canvasLocation" x="2399" y="-9"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="WJN-aL-SBj"/>
+        <segue reference="vt6-Ad-AOU"/>
     </inferredMetricsTieBreakers>
 </document>
